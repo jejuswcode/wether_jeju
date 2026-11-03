@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf4ec">
+  <title>오늘 제주 날씨는?</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><span class="brand">JEJU, TODAY</span><span class="place">대한민국 · 제주</span></header>
+    <section class="intro"><p class="eyebrow">바람이 머무는 섬</p><h1>오늘 제주 날씨는?</h1><p>지금, 제주의 하늘을 만나보세요.</p></section>
+    <section class="weather" aria-label="제주 현재 날씨" aria-busy="false">
+      <div class="card-top"><span class="live"><i></i> 현재 날씨</span><button id="refresh" type="button">↻ 새로고침</button></div>
+      <div class="current"><div><p class="city">제주도 <span>JEJU ISLAND</span></p><p class="temperature"><span id="temperature">—</span><span class="unit">°C</span></p><p id="condition">날씨를 불러올 준비를 하고 있어요</p></div><div class="landscape" aria-hidden="true"><div class="sun"></div><div class="cloud"></div><div class="mountain back"></div><div class="mountain front"></div><div class="sea"></div></div></div>
+      <div class="details"><div><span class="label">습도</span><strong><span id="humidity">—</span><small> %</small></strong></div><div><span class="label">데이터 업데이트 · 한국 시간</span><strong id="updated">—</strong></div></div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <details id="settings"><summary>WeatherAPI 연결 설정</summary><form id="key-form"><label for="api-key">WeatherAPI API 키</label><div class="key-row"><input id="api-key" type="password" autocomplete="off" placeholder="API 키를 입력하세요" required><button type="submit">연결하기</button></div><p>키는 이 탭의 세션에만 저장됩니다. 브라우저에서 API로 직접 요청하므로 본인 키를 사용하세요.</p></form></details>
+    <footer><span>섬의 날씨, 가볍게 확인하세요.</span><a href="https://www.weatherapi.com/" target="_blank" rel="noopener noreferrer">Powered by WeatherAPI.com ↗</a></footer>
+  </main>
+</body>
+</html>
